@@ -1,5 +1,7 @@
 # 🛡️ Secure IBM i MCP Gateway
 
+![Secure IBM i Gateway Banner](assets/banner.png)
+
 ![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Security](https://img.shields.io/badge/Security-Strict%20Allowlist-red.svg)
