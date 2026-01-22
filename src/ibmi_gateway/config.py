@@ -1,5 +1,6 @@
 """
 Gestión de configuración para IBM i Gateway.
+Author: Santiago Pernia
 """
 
 import os

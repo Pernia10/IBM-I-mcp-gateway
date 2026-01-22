@@ -1,5 +1,6 @@
 """
 Pruebas unitarias para validación de seguridad.
+Author: Santiago Pernia
 """
 
 import pytest

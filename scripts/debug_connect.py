@@ -1,3 +1,8 @@
+"""
+Script de diagnóstico de conexión SSH.
+Author: Santiago Pernia
+"""
+
 import paramiko
 import os
 import sys

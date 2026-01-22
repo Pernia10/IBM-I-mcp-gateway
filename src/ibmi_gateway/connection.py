@@ -1,5 +1,6 @@
 """
 Gestión de conexión SSH para sistemas IBM i.
+Author: Santiago Pernia
 """
 
 import paramiko
@@ -26,8 +27,7 @@ class IBMiConnection:
         self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         
         try:
-            # Configuración compatible con IBM i/AS400 (similar a Code for IBM i extension)
-            # IBM i usa algoritmos SSH legacy que requieren configuración especial
+            # Configuración compatible con IBM i (legacy algorithms)
             transport = self.client.get_transport()
             
             self.client.connect(
@@ -38,15 +38,12 @@ class IBMiConnection:
                 timeout=self.config.ssh_timeout,
                 look_for_keys=False,
                 allow_agent=False,
-                # Timeouts extendidos para sistemas IBM i lentos
                 banner_timeout=200,
                 auth_timeout=200,
-                # Deshabilitar algoritmos modernos incompatibles
                 disabled_algorithms={
                     'pubkeys': ['rsa-sha2-512', 'rsa-sha2-256'],
                     'keys': ['rsa-sha2-512', 'rsa-sha2-256']
                 },
-                # Permitir cifrados legacy
                 gss_auth=False,
                 gss_kex=False
             )

@@ -1,5 +1,6 @@
 """
 Servidor FastMCP para IBM i Gateway.
+Author: Santiago Pernia
 """
 
 from mcp.server.fastmcp import FastMCP
