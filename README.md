@@ -79,7 +79,7 @@ El gateway incluye herramientas SQL para explorar objetos y miembros (equivalent
    
    Edit `.env`:
    ```env
-   IBMI_HOST=192.168.1.3
+   IBMI_HOST=YOUR_IBMI_HOST
    IBMI_USER=your_username
    IBMI_PASS=your_password
    IBMI_PORT=22
@@ -121,7 +121,7 @@ You can also pass environment variables directly:
       "command": "uv",
       "args": ["--directory", "YOUR_PATH", "run", "ibmi-gateway"],
       "env": {
-        "IBMI_HOST": "192.168.1.3",
+        "IBMI_HOST": "YOUR_IBMI_HOST",
         "IBMI_USER": "username",
         "IBMI_PASS": "password"
       }
