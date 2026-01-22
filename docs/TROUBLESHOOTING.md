@@ -17,16 +17,16 @@ or
 
 #### 1. Verify Network Connectivity (Ping)
 ```powershell
-ping 192.168.1.3
+ping YOUR_IBMI_HOST
 ```
 
 **Expected Output:**
-- ✅ Success: `Reply from 192.168.1.3: bytes=32 time=Xms`
+- ✅ Success: `Reply from YOUR_IBMI_HOST: bytes=32 time=Xms`
 - ❌ Failure: `Request timed out` → Check VPN/Network
 
 #### 2. Test SSH Port Access
 ```powershell
-Test-NetConnection -ComputerName 192.168.1.3 -Port 22
+Test-NetConnection -ComputerName YOUR_IBMI_HOST -Port 22
 ```
 
 **Expected Output:**
